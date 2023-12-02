@@ -112,7 +112,7 @@
 
 ## Диаграмма вариантов использования для функциональных требований
 
-![use-case-diagram](C:\Study\PAPS\HSE_Architecture\Lab Work №1\docs\use-case-diagram.drawio.png)
+![use-case-diagram](https://github.com/nikitasik4ik/HSE_Architecture/blob/LabWork1/Lab%20Work%20%E2%84%961/docs/use-case-diagram.drawio.png)
 
 ## Перечень сделанных предположений
 
