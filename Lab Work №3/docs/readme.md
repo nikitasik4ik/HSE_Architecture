@@ -26,7 +26,7 @@
 
 ## Применение основных принципов разработки
 Клиентский код:
-
+```
 import requests
 
 class MissingAnimalsService:
@@ -44,12 +44,15 @@ class Found AnimalsService:
     def search(self, animal_name):
         response = requests.get(f"{self.base_url}/found_animals?animal_name={animal_name}")
         return response.json()
-
-
+```
+1. Классы MissingAnimalsService и FoundAnimalsService реализованы с помощью конструктора и метода search, что соответствует принципу DRY (Don't Repeat Yourself).
+2. Каждый класс имеет свою отдельную ответственность - поиск пропавших и найденных животных соответственно, что соответствует принципу SOLID (Single Responsibility Principle).
+3. Используется модуль requests для выполнения HTTP-запросов, что соответствует принципу YAGNI (You Ain't Gonna Need It), так как он не является частью проекта, но может быть использован в будущем.
+4. MissingAnimalsService и FoundAnimalsService являются независимыми друг от друга, что соответствует принципу SOLID (Single Responsibility Principle).
 
 Серверный код:
 
-\```
+```
 from fastapi import FastAPI, JSONResponse
 from database import Database
 
@@ -67,8 +70,11 @@ async def read_found_animals():
     animal_name = request.query_params.get("animal_name")
     results = database.read_found_animals(animal_name)
     return JSONResponse(content=results, status_code=200)
-\```
-
+```
+1. Используется фреймворк FastAPI для создания RESTful API, что соответствует принципу YAGNI (You Ain't Gonna Need It), так как он не является частью проекта, но может быть использован в будущем.
+2. Используется модуль Database для работы с базой данных, что соответствует принципу DRY (Don't Repeat Yourself).
+3. Методы read_missing_animals и read_found_animals выполняют одноимённые операции, что соответствует принципу SOLID (Single Responsibility Principle).
+4. Все классы и методы работают вместе, соответствуя принципу KISS (Keep It Simple Stupid).
 
 ## Дополнительные принципы разработки
 1. BDUF (Big Design Up Front): Этот принцип предполагает, что перед началом разработки необходимо провести масштабное проектирование, чтобы определить все аспекты системы и ее архитектуры. В случае с текущим проектом, это может быть полезным, так как позволит собрать все требования к системе и определить, какие функциональные возможности должны быть реализованы. Однако, применение BDUF также может привести к затягиванию процесса разработки и увеличению времени на разработку.
