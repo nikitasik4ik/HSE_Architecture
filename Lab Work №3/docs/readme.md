@@ -26,7 +26,7 @@
 
 ## Применение основных принципов разработки
 Клиентский код:
-\```
+
 import requests
 
 class MissingAnimalsService:
@@ -44,7 +44,7 @@ class Found AnimalsService:
     def search(self, animal_name):
         response = requests.get(f"{self.base_url}/found_animals?animal_name={animal_name}")
         return response.json()
-\```
+
 
 
 Серверный код:
