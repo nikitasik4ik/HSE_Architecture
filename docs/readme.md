@@ -46,7 +46,8 @@ public class LostPetService
 
 ```
 
-В этом коде мы используем класс Lazy<T>, чтобы гарантировать, что при необходимости создается только один экземпляр службы Lost Pets. Ключевое слово sealed предотвращает наследование от класса и принудительное выполнение одноэлементного поведения во время выполнения. 
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/6da18f2b-16d2-4a74-92a7-54b1587a0cdb)
+
 
 ```
 @startuml
@@ -116,6 +117,7 @@ public class OfflineLostPetsService : LostPetsService
 }
 
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/8e57a62a-147f-413c-aecb-0de3a6b8cc9e)
 
 ```
 @startuml
@@ -198,6 +200,7 @@ public class Cat : ILostPet
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/91c8ccc9-8dc5-4bf2-b361-eb3bdac880e8)
 
 ```
 @startuml
@@ -284,6 +287,7 @@ class NotificationApiClient
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/7d272fd6-32fa-4ae8-a759-2d6b1ab6745f)
 
 ```
 @startuml
@@ -360,6 +364,7 @@ public class LegacyPetAdapter : ILegacyPet, IPet {
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/6a564aba-99b3-418f-b495-c710a0503892)
 
 ```
 @startuml
@@ -428,6 +433,7 @@ public class FoundPetsDatabaseProxy : IFoundPetsDatabase {
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/1811c7a1-3998-4978-9016-6d1a538b4dca)
 
 ```
 @startuml
@@ -513,6 +519,7 @@ public class PetsLister : Sorter {
 
 
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/45d03896-7e40-4968-8ff6-78e45c500ac6)
 
 ```
 @startuml
@@ -640,6 +647,7 @@ void Main()
     invoker.UndoLastAction();
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/9140a2c4-8421-4cd8-bce8-86a1193668d1)
 
 ```
 @startuml
@@ -775,6 +783,7 @@ public static void Main(string[] args)
     service.FoundPet(pet);
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/4f59b924-9582-4570-b5e0-a5fa60a47b5d)
 
 ```
 @startuml
@@ -877,6 +886,7 @@ public class SearchService
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/87359db0-f165-465c-b112-d976e57d0d45)
 
 ```
 @startuml
@@ -984,6 +994,7 @@ public class LoggingSearchService : AbstractSearchService
     }
 }
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/b6e9e66a-cd71-4443-88bd-7994e46fdc5f)
 
 ```
  @startuml
@@ -1081,6 +1092,7 @@ public class User : IPetObserver
 }
 
 ```
+![image](https://github.com/nikitasik4ik/HSE_Architecture/assets/81356111/c00ed00c-0757-4e1f-a664-930479f5434b)
 
 ```
 @startuml
